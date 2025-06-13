@@ -1,6 +1,7 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -21,32 +22,32 @@ body {
         transparent 1px,
         transparent 8px
     );
-      background-size: 100px 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    background-size: 100px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
 
-    /* Óvalo central tipo mesa */
-    .poker-table {
-      width: 90%;
-      max-width: 800px;
-      height: 400px;
-      background-color: #11633f; /* un verde ligeramente distinto */
-      border: 16px solid #5d3a1a; /* borde “madera” */
-      border-radius: 50px / 25px;
-      box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
-      position: relative;
-    }
+/* Óvalo central tipo mesa */
+.poker-table {
+    width: 90%;
+    max-width: 800px;
+    height: 400px;
+    background-color: #11633f; /* un verde ligeramente distinto */
+    border: 16px solid #5d3a1a; /* borde “madera” */
+    border-radius: 50px / 25px;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
 
     /* Línea blanca interior opcional */
-    .poker-table::before {
-      content: "";
-      position: absolute;
-      top: 12px; left: 12px; right: 12px; bottom: 12px;
-      border: 4px solid rgba(255, 255, 255, 0.3);
-      border-radius: 45px / 20px;
-    }
+.poker-table::before {
+    content: "";
+    position: absolute;
+    top: 12px; left: 12px; right: 12px; bottom: 12px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 45px / 20px;
+}
 .card {
     width: 250px;
     height: 350px;
@@ -82,3 +83,32 @@ body {
 .red {
     color: #d32f2f;
 }
+
+
+#value-center {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 60%;
+    height: 60%;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Tamaño de cada pip */
+#value-center .pip {
+    font-size: 2rem; /* ajústalo a tu gusto */
+    line-height: 1;
+}
+
+/* Posiciones dentro del grid */
+.position-1 { grid-area: 1 / 1; } /* fila 1, col 1 */
+.position-2 { grid-area: 1 / 2; }
+.position-3 { grid-area: 1 / 3; }
+.position-4 { grid-area: 2 / 1; }
+.position-5 { grid-area: 2 / 2; }
+.position-6 { grid-area: 2 / 3; }
+.position-7 { grid-area: 3 / 1; }
+.position-8 { grid-area: 3 / 2; }
+.position-9 { grid-area: 3 / 3; }
